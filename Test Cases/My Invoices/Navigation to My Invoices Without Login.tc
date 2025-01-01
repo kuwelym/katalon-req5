@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Navigation to My Invoices Without Login</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>8e39c6e2-34a9-41a4-88b4-6fc526ca8ecc</testCaseGuid>
+</TestCaseEntity>

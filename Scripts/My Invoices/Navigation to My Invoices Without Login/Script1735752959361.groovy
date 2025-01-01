@@ -20,9 +20,6 @@ import org.openqa.selenium.WebElement
 import org.openqa.selenium.By
 import org.openqa.selenium.WebDriver
 import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
-import java.sql.*;
-import com.kuwelym.keywords.LoginHelper
-
 // Verify the user is able to navigate to My Account page
 // Open the website
 WebUI.openBrowser('')
@@ -30,20 +27,13 @@ WebUI.navigateToUrl('http://127.0.0.1:4200/#')
 WebUI.maximizeWindow()
 
 WebDriver driver = DriverFactory.getWebDriver();
-// Login first 
-LoginHelper.forgetPassword("klyminh1@gmail.com")
-LoginHelper.login("klyminh1@gmail.com", "welcome02")
-	
-WebUI.waitForElementVisible(findTestObject('Page_Home MyAccount'), 5)
 
-// Navigate to My Account page
-WebElement userMenu = driver.findElement(By.id("user-menu"));
-userMenu.click();
-WebElement myAccount = driver.findElement(By.xpath("//a[@href='#/account/invoices']"));
-myAccount.click();
+// Navigate to My Account page by URL
+WebUI.navigateToUrl('http://127.0.0.1:4200/#/account/profile')
 
-WebElement myProfileTitle = WebUI.findWebElement(findTestObject('My Invoices Title'))
+// Verify the user is navigated to Login page
+WebElement loginTitle = WebUI.findWebElement(findTestObject('Login/Login Title'))
 
-assert myProfileTitle.isDisplayed() == true
+assert loginTitle.isDisplayed() == true
 
 WebUI.closeBrowser()

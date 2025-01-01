@@ -30,9 +30,9 @@ WebUI.navigateToUrl('http://127.0.0.1:4200/#')
 WebUI.maximizeWindow()
 
 WebDriver driver = DriverFactory.getWebDriver();
-// Login first 
-LoginHelper.forgetPassword("klyminh1@gmail.com")
-LoginHelper.login("klyminh1@gmail.com", "welcome02")
+// Login first
+LoginHelper.forgetPassword(email)
+LoginHelper.login(email, "welcome02")
 	
 WebUI.waitForElementVisible(findTestObject('Page_Home MyAccount'), 5)
 
@@ -42,8 +42,32 @@ userMenu.click();
 WebElement myAccount = driver.findElement(By.xpath("//a[@href='#/account/invoices']"));
 myAccount.click();
 
-WebElement myProfileTitle = WebUI.findWebElement(findTestObject('My Invoices Title'))
+WebElement myInvoiceTitle = WebUI.findWebElement(findTestObject('My Invoices Title'))
 
-assert myProfileTitle.isDisplayed() == true
+assert myInvoiceTitle.isDisplayed() == true
+
+// Get the count of invoices from the UI
+List<WebElement> invoiceRows = driver.findElements(By.xpath("//tbody/tr"));
+int uiInvoiceCount = invoiceRows.size();
+
+String url = "jdbc:mariadb://localhost:3306/toolshop";
+String username = "root";
+String password = "root";
+Class.forName("org.mariadb.jdbc.Driver"); // Or appropriate driver class
+Connection conn = DriverManager.getConnection(url, username, password);
+
+// Get the number of invoices for the user by email
+String query = "SELECT COUNT(*) FROM invoices WHERE user_id = (SELECT id FROM users WHERE email = '${email}')"
+Statement statement = conn.createStatement()
+def result = statement.executeQuery(query)
+
+result.next()
+int dbInvoiceCount = result.getInt(1);
+
+result.close();
+statement.close();
+conn.close();
+
+assert uiInvoiceCount == dbInvoiceCount : "Invoice count mismatch: UI count = " + uiInvoiceCount + ", DB count = " + dbInvoiceCount;
 
 WebUI.closeBrowser()

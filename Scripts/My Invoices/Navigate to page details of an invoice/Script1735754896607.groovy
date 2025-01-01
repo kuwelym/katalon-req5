@@ -30,9 +30,9 @@ WebUI.navigateToUrl('http://127.0.0.1:4200/#')
 WebUI.maximizeWindow()
 
 WebDriver driver = DriverFactory.getWebDriver();
-// Login first 
-LoginHelper.forgetPassword("klyminh1@gmail.com")
-LoginHelper.login("klyminh1@gmail.com", "welcome02")
+// Login first
+LoginHelper.forgetPassword(email)
+LoginHelper.login(email, "welcome02")
 	
 WebUI.waitForElementVisible(findTestObject('Page_Home MyAccount'), 5)
 
@@ -42,8 +42,16 @@ userMenu.click();
 WebElement myAccount = driver.findElement(By.xpath("//a[@href='#/account/invoices']"));
 myAccount.click();
 
-WebElement myProfileTitle = WebUI.findWebElement(findTestObject('My Invoices Title'))
+WebElement myInvoiceTitle = WebUI.findWebElement(findTestObject('My Invoices Title'))
 
-assert myProfileTitle.isDisplayed() == true
+assert myInvoiceTitle.isDisplayed() == true
+
+WebElement invoiceRow = driver.findElement(By.xpath("//tr[td[text()='INV-2022000004']]"))
+WebElement detailsLink = invoiceRow.findElement(By.xpath(".//a[contains(@href, '#/account/invoices/10')]"))
+detailsLink.click()
+
+// verify the URL
+String currentUrl = driver.getCurrentUrl()
+assert currentUrl.contains("#/account/invoices/10") == true
 
 WebUI.closeBrowser()

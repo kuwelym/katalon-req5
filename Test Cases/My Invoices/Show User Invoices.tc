@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Show User Invoices</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>e2a3d3bc-1d5a-494f-99eb-d9644e7fabad</testCaseGuid>
+   <testDataLinks>
+      <combinationType>ONE</combinationType>
+      <id>057318f3-34ab-4f51-ba6e-cd39a4552180</id>
+      <iterationEntity>
+         <iterationType>ALL</iterationType>
+         <value></value>
+      </iterationEntity>
+      <testDataId>Data Files/Invoice login data</testDataId>
+   </testDataLinks>
+   <variableLinks>
+      <testDataLinkId>057318f3-34ab-4f51-ba6e-cd39a4552180</testDataLinkId>
+      <type>DATA_COLUMN</type>
+      <value>email</value>
+      <variableId>7f67b089-a782-420d-a0f2-8a92c11d4bc5</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>7f67b089-a782-420d-a0f2-8a92c11d4bc5</id>
+      <masked>false</masked>
+      <name>email</name>
+   </variable>
+</TestCaseEntity>

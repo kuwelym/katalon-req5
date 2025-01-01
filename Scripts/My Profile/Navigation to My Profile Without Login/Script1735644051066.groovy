@@ -29,7 +29,7 @@ WebUI.maximizeWindow()
 WebDriver driver = DriverFactory.getWebDriver();
 
 // Navigate to My Account page by URL
-WebUI.navigateToUrl('http://127.0.0.1:4200/#/account/profile')
+WebUI.navigateToUrl('http://127.0.0.1:4200/#/account/invoices')
 
 // Verify the user is navigated to Login page
 WebElement loginTitle = WebUI.findWebElement(findTestObject('Login/Login Title'))

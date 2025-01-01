@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Navigate to page details of an invoice</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>0f360598-7882-44ee-9878-132af6d24d88</testCaseGuid>
+   <testDataLinks>
+      <combinationType>ONE</combinationType>
+      <id>057318f3-34ab-4f51-ba6e-cd39a4552180</id>
+      <iterationEntity>
+         <iterationType>ALL</iterationType>
+         <value></value>
+      </iterationEntity>
+      <testDataId>Data Files/Invoice login data</testDataId>
+   </testDataLinks>
+   <variableLinks>
+      <testDataLinkId>057318f3-34ab-4f51-ba6e-cd39a4552180</testDataLinkId>
+      <type>DATA_COLUMN</type>
+      <value>email</value>
+      <variableId>41c83fa2-d45d-4cde-8e2c-de01b26f3370</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>41c83fa2-d45d-4cde-8e2c-de01b26f3370</id>
+      <masked>false</masked>
+      <name>email</name>
+   </variable>
+</TestCaseEntity>
