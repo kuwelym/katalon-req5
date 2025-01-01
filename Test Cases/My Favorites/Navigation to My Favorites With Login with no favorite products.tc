@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Navigation to My Favorites With Login with no favorite products</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>637fdab7-a979-4d16-8ce5-3bccd670b270</testCaseGuid>
+</TestCaseEntity>

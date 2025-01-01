@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestSuiteEntity>
+   <description></description>
+   <name>Change password test suite</name>
+   <tag></tag>
+   <isRerun>false</isRerun>
+   <mailRecipient></mailRecipient>
+   <numberOfRerun>1</numberOfRerun>
+   <pageLoadTimeout>30</pageLoadTimeout>
+   <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
+   <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
+   <rerunImmediately>true</rerunImmediately>
+   <testSuiteGuid>b24e716b-c015-4cfd-bbbc-aa56150350ba</testSuiteGuid>
+   <testCaseLink>
+      <guid>7d74b0a3-e57f-46cf-8ea2-b707d13c355c</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Change Password/Change password</testCaseId>
+      <testDataLink>
+         <combinationType>ONE</combinationType>
+         <id>d3f3b634-6c8b-4d8c-992d-456bff380d73</id>
+         <iterationEntity>
+            <iterationType>ALL</iterationType>
+            <value></value>
+         </iterationEntity>
+         <testDataId>Data Files/Change password data</testDataId>
+      </testDataLink>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
+      <variableLink>
+         <testDataLinkId>d3f3b634-6c8b-4d8c-992d-456bff380d73</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>email</value>
+         <variableId>4eed833d-17e2-40ee-8d41-d6f3092d3128</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>d3f3b634-6c8b-4d8c-992d-456bff380d73</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>current_password</value>
+         <variableId>d7297f82-3728-4ab9-a01c-512dc454b634</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>d3f3b634-6c8b-4d8c-992d-456bff380d73</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>new_password</value>
+         <variableId>64e8cd4c-151d-4e6a-b2ef-fd4428e62f0e</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>d3f3b634-6c8b-4d8c-992d-456bff380d73</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>confirm_new_password</value>
+         <variableId>46ba77c1-0613-4e65-a03f-efb39500d31d</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>d3f3b634-6c8b-4d8c-992d-456bff380d73</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>expected_result</value>
+         <variableId>42342347-5ff3-4d64-913e-59d2c9c66f5d</variableId>
+      </variableLink>
+   </testCaseLink>
+</TestSuiteEntity>

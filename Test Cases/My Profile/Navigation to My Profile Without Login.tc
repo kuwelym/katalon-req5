@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Navigation to My Profile Without Login</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>b0f354c3-02a2-44e3-a1df-a0a353418fb4</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Remove Combination Pliers from Favorite</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>239eaa7e-54ae-4a4a-93c3-b4068a2ecfc2</testCaseGuid>
+</TestCaseEntity>

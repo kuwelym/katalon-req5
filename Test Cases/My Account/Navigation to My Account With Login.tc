@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Navigation to My Account With Login</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>761d4666-73e8-4fd7-b55e-5add8e70dc13</testCaseGuid>
+</TestCaseEntity>
