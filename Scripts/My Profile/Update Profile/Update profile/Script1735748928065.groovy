@@ -32,7 +32,6 @@ WebUI.maximizeWindow()
 
 WebDriver driver = DriverFactory.getWebDriver();
 // Login first
-LoginHelper.forgetPassword(email)
 LoginHelper.login(email, "welcome02")
 	
 WebUI.waitForElementVisible(findTestObject('Page_Home MyAccount'), 5)
@@ -47,9 +46,9 @@ WebElement myAccountTitle = WebUI.findWebElement(findTestObject('My Profile Titl
 
 assert myAccountTitle.isDisplayed() == true
 
-WebElement firstnameField = driver.findElement(By.xpath("//input[@data-test='${field}']"))
-firstnameField.clear()
-firstnameField.sendKeys(data)
+WebElement UIfield = driver.findElement(By.xpath("//input[@data-test='${field}']"))
+UIfield.clear()
+UIfield.sendKeys(data)
 WebElement submitButton = driver.findElement(By.xpath("//button[@data-test='update-profile-submit']"))
 submitButton.click();
 
@@ -61,16 +60,24 @@ Connection conn = DriverManager.getConnection(url, username, password);
 
 // Get the field from the database, change the - to _ for the column name
 
-def query = "SELECT ${field.replaceAll('-', '_')} FROM user WHERE login = '${email}'"
+String fieldName = field.toString().replaceAll("-", "_")
+def query = "SELECT ${fieldName} FROM users WHERE email = '${email}'"
 Statement statement = conn.createStatement()
 def result = statement.executeQuery(query)
 
 result.next()
 
-String UIdata = driver.findElement(By.id(field)).getAttribute("value")
-String dbData = result.getString(field)
+String UIdata = UIfield.getAttribute("value")
+String dbData = result.getString(fieldName)
 
-assert UIdata == dbData
+if(field == "email") {
+
+	WebElement message = driver.findElement(By.xpath("//div[@role='alert']"))	
+	
+	assert message.getText().toLowerCase().contains("cannot modify email") == true
+}
+
+assert UIdata == dbData : "Update ${field} to ${data} failed"
 
 result.close();
 statement.close();

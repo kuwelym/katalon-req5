@@ -17,4 +17,4 @@ build
 
 .cache
 
-.settings\external\com.kms.katalon.core.db.DatabaseSettings.properties
+.settings/external/com.kms.katalon.core.db.DatabaseSettings.properties

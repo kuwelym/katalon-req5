@@ -73,7 +73,7 @@ class LoginHelper {
 		// UPDATE the failed_login_attempts to 0
 		def query = "UPDATE users SET failed_login_attempts = 0 WHERE email = '${email}'"
 		Statement statement = conn.createStatement();
-        statement.executeUpdate(query);
+		statement.executeUpdate(query);
 
 		statement.close();
 		conn.close();
