@@ -19,20 +19,6 @@
       <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>a797ebe2-d1d9-4009-8175-905318869c88</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/My Invoices/Navigation to My Invoices With Login</testCaseId>
-      <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>1507588c-30c6-469b-808b-13a4e7b66c44</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/My Invoices/Navigation to My Invoices Without Login</testCaseId>
-      <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
-   </testCaseLink>
-   <testCaseLink>
       <guid>8157456b-6e6a-41a5-a431-41bfac705b5c</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>

@@ -20,6 +20,7 @@ import org.openqa.selenium.WebElement
 import org.openqa.selenium.By
 import org.openqa.selenium.WebDriver
 import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
+import com.kuwelym.keywords.LoginHelper
 
 // Verify the user is able to navigate to My Account page
 // Open the website
@@ -28,20 +29,9 @@ WebUI.navigateToUrl('http://127.0.0.1:4200/#')
 WebUI.maximizeWindow()
 
 WebDriver driver = DriverFactory.getWebDriver();
-// Login first 
-WebElement loginNav = driver.findElement(By.xpath("//a[@href='#/auth/login']"));
-loginNav.click();
-
-WebUI.waitForElementVisible(findTestObject('Login/Email Field'), 5)
-WebElement emailField = driver.findElement(By.xpath("//input[@type='text']"));
-emailField.sendKeys("customer@practicesoftwaretesting.com");
-
-WebUI.waitForElementVisible(findTestObject('Login/Password Field'), 5)
-WebElement passwordField = driver.findElement(By.xpath("//input[@type='password']"));
-passwordField.sendKeys("welcome01");
-
-WebElement submitButton = driver.findElement(By.className("btnSubmit"));
-submitButton.click();
+// Login first
+LoginHelper.forgetPassword("klyminh1@gmail.com")
+LoginHelper.login("klyminh1@gmail.com", "welcome02")
 	
 WebUI.waitForElementVisible(findTestObject('Page_Home MyAccount'), 5)
 

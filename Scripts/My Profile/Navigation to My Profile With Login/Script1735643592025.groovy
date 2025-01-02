@@ -39,10 +39,10 @@ WebUI.waitForElementVisible(findTestObject('Page_Home MyAccount'), 5)
 // Navigate to My Account page
 WebElement userMenu = driver.findElement(By.id("user-menu"));
 userMenu.click();
-WebElement myAccount = driver.findElement(By.xpath("//a[@href='#/account/invoices']"));
+WebElement myAccount = driver.findElement(By.xpath("//a[@href='#/account/profile']"));
 myAccount.click();
 
-WebElement myProfileTitle = WebUI.findWebElement(findTestObject('My Invoices Title'))
+WebElement myProfileTitle = WebUI.findWebElement(findTestObject('My Profile Title'))
 
 assert myProfileTitle.isDisplayed() == true
 

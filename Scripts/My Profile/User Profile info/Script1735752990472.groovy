@@ -38,14 +38,6 @@ WebUI.waitForElementVisible(findTestObject('Page_Home MyAccount'), 5)
 
 // Navigate to My Account page
 WebElement userMenu = driver.findElement(By.id("user-menu"));
-userMenu.click()
-WebElement myAccount = driver.findElement(By.xpath("//a[@href='#/account/profile']"))
-myAccount.click()
-	
-WebUI.waitForElementVisible(findTestObject('Page_Home MyAccount'), 5)
-
-// Navigate to My Account page
-WebElement userMenu = driver.findElement(By.id("user-menu"));
 userMenu.click();
 WebElement myAccount = driver.findElement(By.xpath("//a[@href='#/account/profile']"));
 myAccount.click();
@@ -74,6 +66,7 @@ String city = driver.findElement(By.id("city")).getAttribute("value")
 String state = driver.findElement(By.id("state")).getAttribute("value")
 String country = driver.findElement(By.id("country")).getAttribute("value")
 
+result.next()
 // Fetch values from the database
 String dbFirstName = result.getString("first_name")
 String dbLastName = result.getString("last_name")
